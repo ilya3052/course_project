@@ -186,7 +186,7 @@ create table "order" (
    order_id             SERIAL               not null,
    client_id            INT4                 not null,
    order_status         INT2                 not null default 0
-      constraint CKC_ORDER_STATUS_ORDER check (order_status between 2 and 0),
+      constraint CKC_ORDER_STATUS_ORDER check (order_status between 0 and 2),
    order_address        VARCHAR(255)         not null,
    order_review         TEXT                 not null
 );
